@@ -1,5 +1,4 @@
 import { auth, provider } from "../config/firebase"
-import { signInWithPopup } from "firebase/auth"
 
 export const Login = () => {
 
@@ -10,9 +9,7 @@ export const Login = () => {
     return (
         <section className="login-wrapper">
             <div className="login">
-                <h1>Sign In With Google To Continue</h1>
-                <button onClick={signInWithGoogle}>Sign In With Google</button>
-                <p>user:{auth.currentUser?.displayName}</p>
+                <h1>Login</h1>
             </div>
         </section>
     )
