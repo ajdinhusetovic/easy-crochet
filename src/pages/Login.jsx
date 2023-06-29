@@ -2,6 +2,10 @@
 
 export const Login = () => {
     return (
-        <div>Login Page</div>
+        <section className="login-wrapper">
+            <div className="login">
+                <h1>Login</h1>
+            </div>
+        </section>
     )
 }
