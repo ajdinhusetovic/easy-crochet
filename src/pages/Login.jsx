@@ -12,6 +12,7 @@ export const Login = () => {
             <div className="login">
                 <h1>Sign In With Google To Continue</h1>
                 <button onClick={signInWithGoogle}>Sign In With Google</button>
+                <p>user:{auth.currentUser?.displayName}</p>
             </div>
         </section>
     )
