@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Main } from './pages/Main'
 import { Login } from './pages/Login'
+import { Counter } from './pages/Counter'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main />}></Route>
           <Route path='/login' element={<Login />}></Route>
+          <Route path='/counter' element={<Counter />}></Route>
         </Routes>
       </Router>
     </div>
