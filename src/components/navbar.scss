@@ -28,6 +28,24 @@ header {
     display: none;
 }
 
+.log-out-div {
+    display: inline;
+
+    button {
+        padding: 6px 8px 6px 8px;
+        font-size: 18px;
+        margin-left: 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #DA9A93;
+
+        &:hover {
+            background-color: darken($color: white, $amount: 12%);
+        }
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .nav-btn {
         display: block;
@@ -74,6 +92,5 @@ header {
         top: 2rem;
         right: 2rem;
     }
-
 
 }

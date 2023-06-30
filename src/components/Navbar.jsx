@@ -26,10 +26,9 @@ export const Navbar = () => {
                 <Link to={"/"}>Home</Link>
                 <Link to={"/login"}>Login</Link>
                 {user && (
-                    <>
-                        {user?.email}
+                    <div className="log-out-div">
                         <button onClick={logOut}>Logout</button>
-                    </>
+                    </div>
                 )}
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes />
