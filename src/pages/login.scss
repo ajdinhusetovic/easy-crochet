@@ -46,3 +46,29 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 1024px) {
+
+    .login-wrapper {
+        margin-top: 0;
+
+        .login {
+            padding-top: 60px;
+            height: 100%;
+            justify-content: start;
+
+            h1 {
+                text-align: center;
+            }
+
+            .buttons {
+                button {
+                    margin-left: 4px;
+                    width: 100px;
+                    padding: 8;
+                }
+            }
+        }
+    }
+}

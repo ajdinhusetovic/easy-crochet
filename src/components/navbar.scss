@@ -46,6 +46,17 @@ header {
     }
 }
 
+.title {
+    
+    h1 {
+        font-size: 42px;
+    }
+
+    p {
+        padding: 0 4px;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .nav-btn {
         display: block;
@@ -91,6 +102,11 @@ header {
         position: absolute;
         top: 2rem;
         right: 2rem;
+    }
+
+
+    .title {
+        display: block;
     }
 
 }

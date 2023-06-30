@@ -21,10 +21,12 @@ export const Navbar = () => {
 
     return (
         <header>
-            <h1>EasyCrochet</h1>
-            {user && (
+            <div className="title">
+                <h1>EasyCrochet</h1>
+                {user && (
                     <p className="user-email">{user?.email}</p>
                 )}
+            </div>
             <nav ref={navRef}>
                 <Link to={"/"}>Home</Link>
                 <Link to={"/login"}>Login</Link>
