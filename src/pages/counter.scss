@@ -16,24 +16,22 @@ section {
         .stitch-row-wrapper {
 
             .stitch-content,
-            .row-content {
-                display: flex;
-                width: 100%;
-                align-items: center;
-                justify-content: center;
-
-                .stitch-label,
-                .row-label {
+                .row-content {
                     width: 50%;
-                    text-align: right;
-                }
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
-                .stitch-value,
-                .row-value {
-                    text-align: center;
-                    width: 20%;
+                    .stitch-label, .row-label {
+                        text-align: center;
+                        width: 50%;
+                    }
+
+                    .stitch-value, .row-value {
+                        text-align: center;
+                        width: 25%;
+                    }
                 }
-            }
 
             p {
                 font-size: 48px;
@@ -77,6 +75,26 @@ section {
             }
 
             .stitch-row-wrapper {
+
+                .stitch-content,
+                .row-content {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    max-width: 200px;
+
+                    .stitch-label, .row-label {
+                        text-align: center;
+                        width: 50%;
+                    }
+
+                    .stitch-value, .row-value {
+                        text-align: center;
+                        width: 25%;
+                    }
+                }
+
 
                 .stitch,
                 .row {
