@@ -45,7 +45,7 @@ export const Counter = () => {
                 <h1>Crochet Counter</h1>
                 <div className="stitch-row-wrapper">
                     <div className="stitch">
-                        <p>Stitch: {stitch}</p>
+                            <p>Stitch: {stitch}</p>
                         <div className="buttons">
                             <button onClick={addStitches}>Add</button>
                             <button onClick={removeStitch}>Remove</button>
@@ -53,7 +53,7 @@ export const Counter = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <p>Row: {row}</p>
+                            <p>Row: {row}</p>
                         <div className="buttons">
                             <button onClick={addRow}>Add</button>
                             <button onClick={removeRow}>Remove</button>

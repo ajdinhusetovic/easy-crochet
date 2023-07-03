@@ -33,7 +33,7 @@ export const Navbar = () => {
                 <Link to={"/counter"}>Counter</Link>
                 {user && (
                     <div className="log-out-div">
-                        <button onClick={logOut}>Logout</button>
+                        <button onClick={logOut} id="log-out-btn">Logout</button>
                     </div>
                 )}
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
