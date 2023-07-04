@@ -43,6 +43,8 @@
                 border-radius: 6px;
                 border: none;
                 cursor: pointer;
+                background-color: #38C8BD;
+                color: lighten($color: #DA9A93, $amount: 20%);
             }
         }
     }
@@ -61,13 +63,22 @@
 
             h1 {
                 text-align: center;
+                font-size: 22px;
+            }
+
+            .inputs {
+
+                input {
+                    width: 70%;
+                    font-size: 14px;
+                }
             }
 
             .buttons {
                 button {
                     margin-left: 4px;
                     width: 100px;
-                    padding: 8;
+                    padding: 8px;
                 }
             }
         }
