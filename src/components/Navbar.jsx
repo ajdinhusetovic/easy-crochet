@@ -29,6 +29,7 @@ export const Navbar = () => {
             </div>
             <nav ref={navRef}>
                 <Link to={"/"}>Home</Link>
+                <Link to={"/register"}>Register</Link>
                 <Link to={"/login"}>Login</Link>
                 <Link to={"/counter"}>Counter</Link>
                 {user && (
