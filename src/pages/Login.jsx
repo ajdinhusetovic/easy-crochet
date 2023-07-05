@@ -24,6 +24,7 @@ export const Login = () => {
             <div className="login">
                 <h1>Sign In</h1>
                 <div className="inputs">
+                    // if error true show error message
                     {error && (
                         <p className="error-message">{error}</p>
                     )}
