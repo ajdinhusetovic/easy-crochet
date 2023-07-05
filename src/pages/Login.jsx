@@ -7,13 +7,14 @@ export const Login = () => {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [error, setError] = useState("")
 
     // sign in function
     const signInUser = async () => {
         try {
             await signInWithEmailAndPassword(auth, email, password)
         } catch (error) {
-            console.log(error)
+            setError("Invalid login!")
         }
     }
 
@@ -23,6 +24,9 @@ export const Login = () => {
             <div className="login">
                 <h1>Sign In</h1>
                 <div className="inputs">
+                    {error && (
+                        <p className="error-message">{error}</p>
+                    )}
                     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                 </div>
