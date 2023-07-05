@@ -4,17 +4,26 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "fire
 import "./login.scss"
 
 export const Login = () => {
+
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
     // register function
     const createUserAccount = async () => {
-        await createUserWithEmailAndPassword(auth, email, password)
+        try {
+            await createUserWithEmailAndPassword(auth, email, password)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     // sign in function
     const signInUser = async () => {
-        await signInWithEmailAndPassword(auth, email, password)
+        try {
+            await signInWithEmailAndPassword(auth, email, password)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
 
