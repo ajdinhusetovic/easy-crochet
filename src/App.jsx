@@ -5,6 +5,7 @@ import { Main } from './pages/Main'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
 import { Counter } from './pages/Counter'
+import { Patterns } from './pages/Patterns'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='/login' element={<Login />}></Route>
           <Route path='/register' element={<Register />}></Route>
           <Route path='/counter' element={<Counter />}></Route>
+          <Route path='/patterns' element={<Patterns />}></Route>
         </Routes>
       </Router>
     </div>

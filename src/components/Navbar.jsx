@@ -32,6 +32,7 @@ export const Navbar = () => {
                 <Link to={"/register"}>Register</Link>
                 <Link to={"/login"}>Login</Link>
                 <Link to={"/counter"}>Counter</Link>
+                <Link to={"/patterns"}>Patterns</Link>
                 {user && (
                     <div className="log-out-div">
                         <button onClick={logOut} id="log-out-btn">Logout</button>
