@@ -1,0 +1,70 @@
+.main-body {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/yarn.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .content {
+        height: 100%;
+
+        .title {
+            width: 80%;
+            padding-top: 120px;
+            text-align: center;
+            font-size: 60px;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        .sub-text {
+            width: 80%;
+            text-align: center;
+            font-size: 50px;
+            padding-top: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end);
+        
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .main-body {
+        .content {
+            .title {
+                width: 90%;
+                white-space: normal;
+                font-size: 26px;
+                animation: none;
+            }
+
+            .sub-text {
+                width: 90%;
+                white-space: normal;
+                font-size: 24px;
+                padding: 40px;
+                animation: none;
+            }
+        }
+    }
+}
