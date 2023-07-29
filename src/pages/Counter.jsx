@@ -1,5 +1,6 @@
 import { useLocalStorage } from "usehooks-ts"
 import "./counter.scss"
+import { motion } from "framer-motion"
 
 export const Counter = () => {
     const [stitch, setStitch] = useLocalStorage("stitch", 0)
@@ -50,9 +51,18 @@ export const Counter = () => {
                             <p className="stitch-value">{stitch}</p>
                         </div>
                         <div className="buttons">
-                            <button onClick={addStitches}>Add</button>
-                            <button onClick={removeStitch}>Remove</button>
-                            <button onClick={resetStitch}>Reset</button>
+                            <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                onClick={addStitches}>Add
+                            </motion.button>
+                            <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                onClick={removeStitch}>Remove
+                            </motion.button>
+                            <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                onClick={resetStitch}>Reset
+                            </motion.button>
                         </div>
                     </div>
                     <div className="row">
@@ -61,9 +71,18 @@ export const Counter = () => {
                             <p className="row-value">{row}</p>
                         </div>
                         <div className="buttons">
-                            <button onClick={addRow}>Add</button>
-                            <button onClick={removeRow}>Remove</button>
-                            <button onClick={resetRow}>Reset</button>
+                            <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                onClick={addRow}>Add
+                            </motion.button>
+                            <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                onClick={removeRow}>Remove
+                            </motion.button>
+                            <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                onClick={resetRow}>Reset
+                            </motion.button>
                         </div>
                     </div>
                 </div>

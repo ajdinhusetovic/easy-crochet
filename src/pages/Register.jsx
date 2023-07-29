@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import "./register.scss"
+import { motion } from 'framer-motion'
 
 export const Register = () => {
 
@@ -45,7 +46,10 @@ export const Register = () => {
                         <p className='error-message'>{errors.passwordConfirm?.message}</p>
                     </div>
                     <div className="buttons">
-                        <button type='submit'>Register</button>
+                        <motion.button
+                            whileTap={{ scale: 0.9 }}
+                            type='submit'>Register
+                        </motion.button>
                     </div>
                 </form>
             </div>

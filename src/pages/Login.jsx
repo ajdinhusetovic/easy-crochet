@@ -2,6 +2,7 @@ import { useState } from "react"
 import { auth } from "../config/firebase"
 import { signInWithEmailAndPassword } from "firebase/auth"
 import "./login.scss"
+import { motion } from "framer-motion"
 
 export const Login = () => {
 
@@ -33,7 +34,11 @@ export const Login = () => {
                     <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <div className="buttons">
-                    <button onClick={signInUser}>Sign In</button>
+                    <motion.button
+                        whileTap={{ scale: 0.9 }}
+                        onClick={signInUser}>Sign In
+                        
+                    </motion.button>
                 </div>
             </div>
         </section>
