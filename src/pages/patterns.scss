@@ -1,4 +1,5 @@
 .patterns-wrapper {
+    display: flex;
     .left {
         border-right: 1px solid black;
         width: 50%;
@@ -30,5 +31,10 @@
                 color: red;
             }
         }
+    }
+
+    .right {
+        width: 50%;
+        margin-top: 80px;
     }
 }

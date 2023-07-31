@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './patterns.scss'
 import { motion } from 'framer-motion'
 import * as yup from "yup"
@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { addDoc, getDocs, collection } from "firebase/firestore"
 import { db } from '../config/firebase'
+import { Pattern } from '../components/Pattern'
 
 export const Patterns = () => {
 
@@ -28,6 +29,16 @@ export const Patterns = () => {
     })
   }
 
+  const [patternsList, setPatternsList] = useState(null)
+
+  const getPatterns = async () => {
+    const data = await getDocs(postsRef)
+    setPatternsList(data.docs.map((doc) => ({ ...doc.data() })))
+  }
+
+  useEffect(() => {
+    getPatterns()
+  }, [])
 
   return (
     <div className='patterns-wrapper'>
@@ -54,7 +65,9 @@ export const Patterns = () => {
         </form>
       </div>
       <div className="right">
-
+        {patternsList?.map((pattern) => (
+          <Pattern pattern={pattern} />
+        ))}
       </div>
     </div>
   )
