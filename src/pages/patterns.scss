@@ -1,0 +1,34 @@
+.patterns-wrapper {
+    .left {
+        border-right: 1px solid black;
+        width: 50%;
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin: 120px auto 0 auto;
+
+            input {
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid black;
+                font-size: 18px;
+            }
+
+            #submit-btn {
+                width: 25%;
+                margin: 30px auto 0 auto;
+            }
+
+            label {
+                margin-top: 20px;
+                padding: 4px;
+                font-size: 20px;
+            }
+
+            p {
+                color: red;
+            }
+        }
+    }
+}
