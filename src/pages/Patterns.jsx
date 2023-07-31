@@ -61,7 +61,6 @@ export const Patterns = () => {
             type="submit"
             value={"Add pattern"}
             id='submit-btn'
-            onClick={() => window.location.reload()}
           />
         </form>
       </div>
