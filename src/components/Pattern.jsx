@@ -1,9 +1,10 @@
 import React from 'react'
+import './pattern.scss'
 
 export const Pattern = (props) => {
   const { pattern } = props
   return (
-    <div>
+    <div className='pattern'>
       <div className="title">
         {pattern.title}
       </div>

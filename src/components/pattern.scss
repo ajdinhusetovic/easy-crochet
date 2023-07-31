@@ -1,0 +1,16 @@
+.pattern {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+
+    div {
+        margin-top: 10px;
+    }
+}

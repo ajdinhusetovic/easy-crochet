@@ -61,13 +61,19 @@ export const Patterns = () => {
             type="submit"
             value={"Add pattern"}
             id='submit-btn'
+            onClick={() => window.location.reload()}
           />
         </form>
       </div>
       <div className="right">
-        {patternsList?.map((pattern) => (
-          <Pattern pattern={pattern} />
-        ))}
+        <div className="patterns-title">
+          <h1>Your Patterns</h1>
+        </div>
+        <div className="patterns">
+          {patternsList?.map((pattern) => (
+            <Pattern pattern={pattern} />
+          ))}
+        </div>
       </div>
     </div>
   )
