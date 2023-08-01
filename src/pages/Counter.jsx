@@ -41,7 +41,7 @@ export const Counter = () => {
     }
 
     return (
-        <section>
+        <section className="counter-section">
             <div className="counter-wrapper">
                 <h1>Crochet Counter</h1>
                 <div className="stitch-row-wrapper">

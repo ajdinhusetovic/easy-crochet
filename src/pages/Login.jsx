@@ -23,24 +23,26 @@ export const Login = () => {
 
 
     return (
-        <section className="login-wrapper">
-            <div className="login">
-                <h1>Sign In</h1>
-                <div className="inputs">
-                    {error && (
-                        <p className="error-message">{error}</p>
-                    )}
-                    <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-                    <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+        <div className="wrapper">
+            <section className="login-wrapper">
+                <div className="login">
+                    <h1>Sign In</h1>
+                    <div className="inputs">
+                        {error && (
+                            <p className="error-message">{error}</p>
+                        )}
+                        <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                        <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+                    <div className="buttons">
+                        <motion.button
+                            whileTap={{ scale: 0.9 }}
+                            onClick={signInUser}>Sign In
+
+                        </motion.button>
+                    </div>
                 </div>
-                <div className="buttons">
-                    <motion.button
-                        whileTap={{ scale: 0.9 }}
-                        onClick={signInUser}>Sign In
-                        
-                    </motion.button>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     )
 }

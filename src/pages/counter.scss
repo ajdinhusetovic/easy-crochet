@@ -1,7 +1,8 @@
-section {
-    max-width: 1360px;
+.counter-section {
     margin: auto;
-    margin-top: 75px;
+    padding-top: 125px;
+    height: 100vh;
+    background-image: linear-gradient(to top, #0A2F54, #87CEFA 90%);
 
     .counter-wrapper {
 
@@ -64,8 +65,8 @@ section {
 
 
 @media only screen and (max-width: 1024px) {
-    section {
-        margin-top: 20px;
+    .counter-section {
+        margin-top: 0px;
 
         .counter-wrapper {
 

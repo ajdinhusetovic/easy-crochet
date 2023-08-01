@@ -1,7 +1,10 @@
 .patterns-wrapper {
+    /*background-color: #0A2F54;*/
+    background-image: linear-gradient(to top, #0A2F54, #87CEFA 90%);
+    height: 100vh;
     display: flex;
     .left {
-        border-right: 1px solid black;
+        border-right: 2px solid black;
         width: 50%;
         form {
             display: flex;

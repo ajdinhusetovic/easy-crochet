@@ -5,7 +5,8 @@ header {
     justify-content: space-between;
     height: 80px;
     padding: 0 100px;
-    background-color: #38C8BD;
+    background-color: #87CEFA;
+    border-bottom: 2px solid black;
 
     h1 {
         font-size: 50px;
@@ -14,12 +15,12 @@ header {
 
     nav a {
         text-decoration: none;
-        color: #DA9A93;
+        color: black;
         margin: 0 12px;
         font-size: 22px;
 
         &:hover {
-            color: darken($color: #DA9A93, $amount: 30%);
+            color: darken($color: white, $amount: 70%);
         }
     }
 }
@@ -41,7 +42,7 @@ header {
         color: #DA9A93;
 
         &:hover {
-            background-color: darken($color: white, $amount: 12%);
+            background-color: darken($color: white, $amount: 70%);
         }
     }
 }
@@ -84,7 +85,7 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: darken($color: #38C8BD, $amount: 10%);
+        background-color: darken($color: #87CEFA, $amount: 10%);
         transition: 1s;
         transform: translateY(-100vh);
     }
@@ -94,7 +95,7 @@ header {
 
         a {
             margin-top: 12px;
-            color: darken($color: #DA9A93, $amount: 30%);
+            color: darken($color: white, $amount: 70%);
         }
     }
 

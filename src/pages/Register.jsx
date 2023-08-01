@@ -30,29 +30,31 @@ export const Register = () => {
     }
 
     return (
-        <section className="register-wrapper">
-            <div className="register">
-                <h1>Create An Account</h1>
-                <form onSubmit={handleSubmit(createUserAccount)}>
-                    <div className="inputs">
-                        {error && (
-                            <p className='error-message'>{error}</p>
-                        )}
-                        <input placeholder="Email" {...register("email")} />
-                        <p className='error-message'>{errors.email?.message}</p>
-                        <input type="password" placeholder="Password" {...register("password")} />
-                        <p className='error-message'>{errors.password?.message}</p>
-                        <input type="password" placeholder='Confirm Password' {...register("passwordConfirm")} />
-                        <p className='error-message'>{errors.passwordConfirm?.message}</p>
-                    </div>
-                    <div className="buttons">
-                        <motion.button
-                            whileTap={{ scale: 0.9 }}
-                            type='submit'>Register
-                        </motion.button>
-                    </div>
-                </form>
-            </div>
-        </section>
+        <div className="wrapper">
+            <section className="register-wrapper">
+                <div className="register">
+                    <h1>Create An Account</h1>
+                    <form onSubmit={handleSubmit(createUserAccount)}>
+                        <div className="inputs">
+                            {error && (
+                                <p className='error-message'>{error}</p>
+                            )}
+                            <input placeholder="Email" {...register("email")} />
+                            <p className='error-message'>{errors.email?.message}</p>
+                            <input type="password" placeholder="Password" {...register("password")} />
+                            <p className='error-message'>{errors.password?.message}</p>
+                            <input type="password" placeholder='Confirm Password' {...register("passwordConfirm")} />
+                            <p className='error-message'>{errors.passwordConfirm?.message}</p>
+                        </div>
+                        <div className="buttons">
+                            <motion.button
+                                whileTap={{ scale: 0.9 }}
+                                type='submit'>Register
+                            </motion.button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
     )
 }

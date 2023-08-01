@@ -1,10 +1,9 @@
-
-
 .register-wrapper {
     height: 100vh;
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin: 0 auto;
+    padding-top: 125px;
     max-width: 700px;
 
     .register {
@@ -13,7 +12,7 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
-        background-color: antiquewhite;
+        background-color: #DFC5FE;
         height: 500px;
         border-radius: 8px;
         width: 100%;
@@ -68,7 +67,7 @@
 @media only screen and (max-width: 1024px) {
 
     .register-wrapper {
-        margin-top: 0;
+        padding-top: 0;
         display: block;
         max-width: 1024px;
 
