@@ -1,7 +1,5 @@
 .patterns-wrapper {
-    /*background-color: #0A2F54;*/
-    background-image: linear-gradient(to top, #0A2F54, #87CEFA 90%);
-    height: 100vh;
+    background-color: #0A2F54;
     display: flex;
     .left {
         border-right: 2px solid black;
@@ -22,6 +20,7 @@
             #submit-btn {
                 width: 25%;
                 margin: 30px auto 0 auto;
+                background-color: #87CEFA;
             }
 
             label {
@@ -53,5 +52,40 @@
             gap: 50px;
             flex-wrap: wrap;
         }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .patterns-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .left {
+            width: 100%;
+            border: none;
+
+            form {
+                margin-top: 70px;
+
+                #submit-btn {
+                    width: 50%;
+                }
+            }
+        }
+
+        .right {
+            width: 100%;
+
+            .patterns {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .patterns-wrapper {
+        height: 100vh;
     }
 }

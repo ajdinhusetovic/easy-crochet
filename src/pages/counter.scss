@@ -2,7 +2,7 @@
     margin: auto;
     padding-top: 125px;
     height: 100vh;
-    background-image: linear-gradient(to top, #0A2F54, #87CEFA 90%);
+    background-color: #0A2F54;
 
     .counter-wrapper {
 
@@ -46,6 +46,7 @@
                 border-radius: 6px;
                 font-size: 16px;
                 cursor: pointer;
+                background-color: #87CEFA;
             }
 
             .stitch,

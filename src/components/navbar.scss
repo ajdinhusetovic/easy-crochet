@@ -6,7 +6,7 @@ header {
     height: 80px;
     padding: 0 100px;
     background-color: #87CEFA;
-    border-bottom: 2px solid black;
+    color: black;
 
     h1 {
         font-size: 50px;
@@ -33,16 +33,17 @@ header {
     display: inline;
 
     button {
-        padding: 6px 8px 6px 8px;
+        padding: 6px 12px 6px 12px;
         font-size: 18px;
         margin-left: 20px;
         border: none;
         border-radius: 8px;
         cursor: pointer;
-        color: #DA9A93;
+        color: white;
+        background-color: #0A2F54;
 
         &:hover {
-            background-color: darken($color: white, $amount: 70%);
+            background-color: darken($color: white, $amount: 50%);
         }
     }
 }
