@@ -1,21 +1,31 @@
 import React from 'react'
 import './pattern.scss'
+import { deleteDoc, doc } from 'firebase/firestore'
+import { db } from '../config/firebase'
 
 export const Pattern = (props) => {
   const { pattern } = props
+
+  const deletePattern = async (id) => {
+    const patternDoc = doc(db, "patterns", id)
+    await deleteDoc(patternDoc)
+  }
   return (
     <div className='pattern'>
       <div className="title">
-        {pattern.title}
+        <span className='pattern-label'>Title</span>{pattern.title}
       </div>
       <div className="yarn-name">
-        {pattern.yarnName}
+        <span className='pattern-label'>Yarn name</span>{pattern.yarnName}
       </div>
       <div className="yarn-skein">
-        {pattern.yarnSkein}
+      <span className='pattern-label'>Yarn skein</span>{pattern.yarnSkein}
       </div>
       <div className="hook-size">
-        {pattern.hookSize}
+      <span className='pattern-label'>Hook size:</span>{pattern.hookSize}
+      </div>
+      <div>
+        <button onClick={() => deletePattern(pattern.id)}>delete</button>
       </div>
     </div>
   )

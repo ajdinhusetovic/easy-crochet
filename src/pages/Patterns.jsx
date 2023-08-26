@@ -33,7 +33,9 @@ export const Patterns = () => {
 
   const getPatterns = async () => {
     const data = await getDocs(postsRef)
-    setPatternsList(data.docs.map((doc) => ({ ...doc.data() })))
+    const filteredData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+    setPatternsList(filteredData)
+    
   }
 
   useEffect(() => {
@@ -70,7 +72,9 @@ export const Patterns = () => {
         </div>
         <div className="patterns">
           {patternsList?.map((pattern) => (
-            <Pattern pattern={pattern} />
+            <>
+              <Pattern pattern={pattern} />
+            </>
           ))}
         </div>
       </div>
