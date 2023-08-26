@@ -5,6 +5,7 @@ import "./navbar.scss"
 import { auth } from "../config/firebase"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { signOut } from "firebase/auth"
+import { motion } from "framer-motion"
 
 export const Navbar = () => {
     const navRef = useRef()
@@ -35,7 +36,12 @@ export const Navbar = () => {
                 <Link to={"/patterns"}>Patterns</Link>
                 {user && (
                     <div className="log-out-div">
-                        <button onClick={logOut} id="log-out-btn">Logout</button>
+                        <motion.button
+                            whileTap={{scale: 0.9}}
+                            onClick={logOut}
+                            id="log-out-btn">
+                            Logout
+                        </motion.button>
                     </div>
                 )}
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>

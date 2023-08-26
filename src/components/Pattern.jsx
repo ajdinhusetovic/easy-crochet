@@ -2,6 +2,7 @@ import React from 'react'
 import './pattern.scss'
 import { deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../config/firebase'
+import { motion } from 'framer-motion'
 
 export const Pattern = (props) => {
   const { pattern } = props
@@ -19,13 +20,18 @@ export const Pattern = (props) => {
         <span className='pattern-label'>Yarn name</span>{pattern.yarnName}
       </div>
       <div className="yarn-skein">
-      <span className='pattern-label'>Yarn skein</span>{pattern.yarnSkein}
+        <span className='pattern-label'>Yarn skein</span>{pattern.yarnSkein}
       </div>
       <div className="hook-size">
-      <span className='pattern-label'>Hook size:</span>{pattern.hookSize}
+        <span className='pattern-label'>Hook size:</span>{pattern.hookSize}
       </div>
       <div>
-        <button onClick={() => deletePattern(pattern.id)}>delete</button>
+
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          onClick={() => deletePattern(pattern.id)}>
+          delete
+        </motion.button>
       </div>
     </div>
   )
